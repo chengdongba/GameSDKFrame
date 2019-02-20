@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GameSDKFrame.iml" filepath="$PROJECT_DIR$/GameSDKFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test/GameSDK_Channel_Test.iml" filepath="$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test/GameSDK_Channel_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gamesdk_api/gamesdk_api.iml" filepath="$PROJECT_DIR$/gamesdk_api/gamesdk_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gamesdk_manager_impl/gamesdk_manager_impl.iml" filepath="$PROJECT_DIR$/gamesdk_manager_impl/gamesdk_manager_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account/gamesdk_module_account.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account/gamesdk_module_account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init/gamesdk_module_init.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init/gamesdk_module_init.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase/gamesdk_module_purchase.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase/gamesdk_module_purchase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe/gamesdk_project_juhe.iml" filepath="$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe/gamesdk_project_juhe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gamesdk_utils/gamesdk_utils.iml" filepath="$PROJECT_DIR$/gamesdk_utils/gamesdk_utils.iml" />
+    </modules>
+  </component>
+</project>

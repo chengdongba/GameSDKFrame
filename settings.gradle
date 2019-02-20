@@ -1,0 +1,41 @@
+include ':app',
+
+        //项目api
+        ':gamesdk_api',
+
+        //项目project
+        ':gamesdk_project_juhe',
+
+        //项目渠道插件
+        ':GameSDK_Channel_Test',
+
+        //项目功能module插件
+        ':gamesdk_module_init',
+        ':gamesdk_module_account',
+        ':gamesdk_module_purchase',
+
+        //功能插件
+        ':gamesdk_manager_impl',
+
+        //基础库
+        ':gamesdk_utils'
+
+//项目API工程
+project(':gamesdk_api').projectDir = new File('gamesdk_api')
+
+//项目project工程
+project(':gamesdk_project_juhe').projectDir = new File('GameSDK_Project/gamesdk_project_juhe')
+
+//项目channel工程
+project(':GameSDK_Channel_Test').projectDir = new File('GameSDK_Channel/GameSDK_Channel_Test')
+
+//项目manager_module工程
+project(':gamesdk_module_init').projectDir = new File('GameSDK_Manager/gamesdk_module_init')
+project(':gamesdk_module_account').projectDir = new File('GameSDK_Manager/gamesdk_module_account')
+project(':gamesdk_module_purchase').projectDir = new File('GameSDK_Manager/gamesdk_module_purchase')
+
+//项目plugin工程
+project(':gamesdk_manager_impl').projectDir = new File('gamesdk_manager_impl')
+
+//基础库
+project(':gamesdk_utils').projectDir = new File('gamesdk_utils')

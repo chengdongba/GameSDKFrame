@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test" />
+            <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account" />
+            <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init" />
+            <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase" />
+            <option value="$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/gamesdk_api" />
+            <option value="$PROJECT_DIR$/gamesdk_manager_impl" />
+            <option value="$PROJECT_DIR$/gamesdk_utils" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
