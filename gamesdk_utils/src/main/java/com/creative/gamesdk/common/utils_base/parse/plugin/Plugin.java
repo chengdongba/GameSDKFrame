@@ -14,8 +14,23 @@ import com.creative.gamesdk.common.utils_base.proguard.ProguardInterface;
 
 public class Plugin implements LifeCycleInterface,ProguardInterface{
 
+    private static final String TAG = "plugin";
 
+    public PluginBeanList.PluginBean pluginBean;
 
+    private boolean hasInited;
+
+    protected synchronized void initPlugin(){
+        if (hasInited){
+            return ;
+        }
+        hasInited = true;
+    }
+
+    @Override
+    public String toString() {
+        return "Plugin{" + "pluginMessage=" + pluginBean + ", hasInited=" + hasInited + '}';
+    }
 
     /****************************  生命周期接口  **************************************/
     @Override

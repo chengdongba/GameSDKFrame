@@ -2,8 +2,11 @@ package com.creative.gamesdk.common.utils_base.parse.project;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 
 import com.creative.gamesdk.common.utils_base.interfaces.CallBackListener;
+import com.creative.gamesdk.common.utils_base.parse.plugin.PluginManager;
 import com.creative.gamesdk.common.utils_base.proguard.ProguardInterface;
 
 import java.util.HashMap;
@@ -131,43 +134,43 @@ public abstract class Project implements ProguardInterface {
 
     /*****************************************  顶层生命周期接口 （目前实现各个插件的生命周期）**************************************************/
 
-//    public void onCreate(Activity activity, Bundle savedInstanceState) {
-//        PluginManager.getInstance().onCreate(activity, savedInstanceState);
-//    }
-//
-//    public void onStart(Activity activity) {
-//        PluginManager.getInstance().onStart(activity);
-//    }
-//
-//    public void onResume(Activity activity) {
-//        PluginManager.getInstance().onResume(activity);
-//    }
-//
-//    public void onPause(Activity activity) {
-//        PluginManager.getInstance().onPause(activity);
-//    }
-//
-//    public void onStop(Activity activity) {
-//        PluginManager.getInstance().onStop(activity);
-//    }
-//
-//    public void onRestart(Activity activity) {
-//        PluginManager.getInstance().onRestart(activity);
-//    }
-//
-//    public void onDestroy(Activity activity) {
-//        PluginManager.getInstance().onDestroy(activity);
-//    }
-//
-//    public void onNewIntent(Activity activity, Intent intent) {
-//        PluginManager.getInstance().onNewIntent(activity,intent);
-//    }
-//
-//    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-//        PluginManager.getInstance().onActivityResult(activity, requestCode, requestCode, data);
-//    }
-//
-//    public void onRequestPermissionsResult(Activity activity, int requestCode, String[] permissions, int[] grantResults) {
-//        PluginManager.getInstance().onRequestPermissionsResult(activity,requestCode,permissions,grantResults);
-//    }
+    public void onCreate(Activity activity, Bundle savedInstanceState) {
+        PluginManager.getInstance().onCreate(activity, savedInstanceState);
+    }
+
+    public void onStart(Activity activity) {
+        PluginManager.getInstance().onStart(activity);
+    }
+
+    public void onResume(Activity activity) {
+        PluginManager.getInstance().onResume(activity);
+    }
+
+    public void onPause(Activity activity) {
+        PluginManager.getInstance().onPause(activity);
+    }
+
+    public void onStop(Activity activity) {
+        PluginManager.getInstance().onStop(activity);
+    }
+
+    public void onRestart(Activity activity) {
+        PluginManager.getInstance().onRestart(activity);
+    }
+
+    public void onDestroy(Activity activity) {
+        PluginManager.getInstance().onDestroy(activity);
+    }
+
+    public void onNewIntent(Activity activity, Intent intent) {
+        PluginManager.getInstance().onNewIntent(activity,intent);
+    }
+
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+        PluginManager.getInstance().onActivityResult(activity, requestCode, requestCode, data);
+    }
+
+    public void onRequestPermissionsResult(Activity activity, int requestCode, String[] permissions, int[] grantResults) {
+        PluginManager.getInstance().onRequestPermissionsResult(activity,requestCode,permissions,grantResults);
+    }
 }
