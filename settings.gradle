@@ -16,6 +16,8 @@ include ':app',
 
         //功能插件
         ':gamesdk_manager_impl',
+        ':gamesdk_plugin_alipay',
+        ':gamesdk_plugin_wechat',
 
         //基础库
         ':gamesdk_utils'
@@ -36,6 +38,8 @@ project(':gamesdk_module_purchase').projectDir = new File('GameSDK_Manager/games
 
 //项目plugin工程
 project(':gamesdk_manager_impl').projectDir = new File('gamesdk_manager_impl')
+project(':gamesdk_plugin_alipay').projectDir = new File('GameSDK_Plugin/gamesdk_plugin_alipay')
+project(':gamesdk_plugin_wechat').projectDir = new File('GameSDK_Plugin/gamesdk_plugin_wechat')
 
 //基础库
 project(':gamesdk_utils').projectDir = new File('gamesdk_utils')

@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account" />
             <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init" />
             <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase" />
+            <option value="$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_alipay" />
+            <option value="$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_wechat" />
             <option value="$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/gamesdk_api" />

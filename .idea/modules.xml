@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account/gamesdk_module_account.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account/gamesdk_module_account.iml" />
       <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init/gamesdk_module_init.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init/gamesdk_module_init.iml" />
       <module fileurl="file://$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase/gamesdk_module_purchase.iml" filepath="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_purchase/gamesdk_module_purchase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_alipay/gamesdk_plugin_alipay.iml" filepath="$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_alipay/gamesdk_plugin_alipay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_wechat/gamesdk_plugin_wechat.iml" filepath="$PROJECT_DIR$/GameSDK_Plugin/gamesdk_plugin_wechat/gamesdk_plugin_wechat.iml" />
       <module fileurl="file://$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe/gamesdk_project_juhe.iml" filepath="$PROJECT_DIR$/GameSDK_Project/gamesdk_project_juhe/gamesdk_project_juhe.iml" />
       <module fileurl="file://$PROJECT_DIR$/gamesdk_utils/gamesdk_utils.iml" filepath="$PROJECT_DIR$/gamesdk_utils/gamesdk_utils.iml" />
     </modules>

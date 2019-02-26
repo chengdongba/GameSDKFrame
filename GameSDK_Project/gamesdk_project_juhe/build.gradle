@@ -30,4 +30,5 @@ dependencies {
     implementation project(':gamesdk_module_account')
     implementation project(':gamesdk_module_init')
     implementation project(':gamesdk_module_purchase')
+    implementation project(':gamesdk_utils')
 }

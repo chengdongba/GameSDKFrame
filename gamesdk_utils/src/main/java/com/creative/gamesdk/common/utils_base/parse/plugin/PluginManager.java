@@ -90,7 +90,7 @@ public class PluginManager extends PluginReflectApi {
      *
      * @return
      */
-    private synchronized void loadAllPlugins() {
+    public synchronized void loadAllPlugins() {
         if (hasLoaded) {
             return;
         }
