@@ -11,19 +11,19 @@ public class AccountEventResultInfo {
     private String message;//描述信息
     private PlayerInfo playerInfo;//用户信息
 
-    public int getEventType() {
-        return eventType;
+    public void setEventType(int eventType) {
+        this.eventType = eventType;
     }
 
-    public int getStatusCode() {
-        return statusCode;
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
 
-    public String getMessage() {
-        return message;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public PlayerInfo getPlayerInfo() {
-        return playerInfo;
+    public void setPlayerInfo(PlayerInfo playerInfo) {
+        this.playerInfo = playerInfo;
     }
 }

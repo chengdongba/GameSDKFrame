@@ -2,7 +2,7 @@
     "project": [
         {
             "project_name": "project",
-            "class_name": "com.bzai.gamesdk.project.JuHeProject",
+            "class_name": "com.creative.gamesdk.project.JuHeProject",
             "description": "聚合SDK项目",
             "version": "1.0.0"
         }

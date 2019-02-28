@@ -1,10 +1,10 @@
 package com.creative.gamesdk.common.utils_base.utils;
 
 
-import com.bzai.gamesdk.common.utils_base.frame.logger.AndroidLogAdapter;
-import com.bzai.gamesdk.common.utils_base.frame.logger.FormatStrategy;
-import com.bzai.gamesdk.common.utils_base.frame.logger.Logger;
-import com.bzai.gamesdk.common.utils_base.frame.logger.PrettyFormatStrategy;
+import com.creative.gamesdk.common.utils_base.frame.logger.AndroidLogAdapter;
+import com.creative.gamesdk.common.utils_base.frame.logger.FormatStrategy;
+import com.creative.gamesdk.common.utils_base.frame.logger.Logger;
+import com.creative.gamesdk.common.utils_base.frame.logger.PrettyFormatStrategy;
 
 /**
  * Created by bzai on 2018/04/09.

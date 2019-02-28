@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GameSDKBuildJarTool/GameSDKBuildJarTool.iml" filepath="$PROJECT_DIR$/GameSDKBuildJarTool/GameSDKBuildJarTool.iml" />
       <module fileurl="file://$PROJECT_DIR$/GameSDKFrame.iml" filepath="$PROJECT_DIR$/GameSDKFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test/GameSDK_Channel_Test.iml" filepath="$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test/GameSDK_Channel_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

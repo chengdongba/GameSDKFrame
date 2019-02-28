@@ -22,6 +22,9 @@ import com.creative.gamesdk.common.utils_base.frame.google.gson.JsonSyntaxExcept
 import com.creative.gamesdk.common.utils_base.frame.google.gson.TypeAdapter;
 import com.creative.gamesdk.common.utils_base.frame.google.gson.TypeAdapterFactory;
 import com.creative.gamesdk.common.utils_base.frame.google.gson.reflect.TypeToken;
+import com.creative.gamesdk.common.utils_base.frame.google.gson.stream.JsonReader;
+import com.creative.gamesdk.common.utils_base.frame.google.gson.stream.JsonToken;
+import com.creative.gamesdk.common.utils_base.frame.google.gson.stream.JsonWriter;
 
 import java.io.IOException;
 import java.text.DateFormat;

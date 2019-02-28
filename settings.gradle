@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':GameSDKBuildJarTool',
 
         //项目api
         ':gamesdk_api',

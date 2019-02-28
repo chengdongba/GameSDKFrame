@@ -18,7 +18,7 @@ import java.util.Set;
 
 public class ProjectManager {
     private static final String TAG = "ProjectManager";
-    public static String PROJECT_CONFIG = "project_config.txt";
+    public static String PROJECT_CONFIG = "Project_config.txt";
 
     /************************** 同步锁双重检测机制实现到单例模式(懒加载) ***************************/
 
@@ -62,7 +62,7 @@ public class ProjectManager {
                 return;
             } else {
                 for (ProjectBeanList.ProjectBean projectBean : projectBeanList.getProject()) {
-                    projectBeans.put(projectBean.getClass_name(), projectBean);
+                    projectBeans.put(projectBean.getProject_name(), projectBean);
                 }
                 LogUtils.debug_i(TAG, PROJECT_CONFIG + " parse \n" + projectBeans.toString());
             }

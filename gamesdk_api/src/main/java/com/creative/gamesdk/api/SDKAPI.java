@@ -11,14 +11,22 @@ import com.creative.gamesdk.bean.info.AccountEventResultInfo;
 import com.creative.gamesdk.bean.info.PlayerInfo;
 import com.creative.gamesdk.bean.params.GameRoleParams;
 import com.creative.gamesdk.bean.params.PayParams;
+import com.creative.gamesdk.common.utils_base.config.ErrCode;
+import com.creative.gamesdk.common.utils_base.config.TypeConfig;
+import com.creative.gamesdk.common.utils_base.frame.google.gson.Gson;
+import com.creative.gamesdk.common.utils_base.frame.google.gson.JsonObject;
 import com.creative.gamesdk.common.utils_base.interfaces.CallBackListener;
 import com.creative.gamesdk.common.utils_base.parse.project.Project;
 import com.creative.gamesdk.common.utils_base.parse.project.ProjectManager;
 import com.creative.gamesdk.common.utils_base.utils.LogUtils;
+import com.creative.gamesdk.common.utils_base.utils.ObjectUtils;
 import com.creative.gamesdk.listener.AccountCallBackListener;
 import com.creative.gamesdk.listener.ExitCallBackListener;
 import com.creative.gamesdk.listener.InitCallBackListener;
 import com.creative.gamesdk.listener.PurchaseCallBackListener;
+import com.creative.gamesdk.module.account.bean.AccountBean;
+import com.creative.gamesdk.module.account.bean.AccountCallbackBean;
+import com.creative.gamesdk.module.purchase.PurchaseResult;
 
 import java.util.HashMap;
 
@@ -88,7 +96,7 @@ public class SDKAPI {
     }
 
     public void onRequestPermissionResult(Activity activity, int requestCode, String[] permissions, int[] grantResults) {
-        project.onRequestPermissionResult(activity, requestCode, permissions, grantResults);
+        project.onRequestPermissionsResult(activity, requestCode, permissions, grantResults);
     }
 
     /*********************************************  SDK接口  *************************************************/
@@ -115,7 +123,7 @@ public class SDKAPI {
 
         //设置账号回调监听
         mAccountCallBackListener = accountCallBackListener;
-        project.setAccontCallBackListener(SDKaccountCallBackListener);
+        project.setAccountCallBackLister(SDKAccountCallBackListener);
 
         project.init(activity, gameInfoSetting.gameid, gameInfoSetting.gamekey, new CallBackListener() {
 
@@ -144,7 +152,7 @@ public class SDKAPI {
         AccountEventResultInfo accountResult = new AccountEventResultInfo();
         accountResult.setEventType(type);
         accountResult.setStatusCode(statusCode);
-        accountResult.setMsg(msg);
+        accountResult.setMessage(msg);
         if (loginInfo != null) {
 
             PlayerInfo playerInfo = new PlayerInfo();
@@ -158,8 +166,8 @@ public class SDKAPI {
 
         Gson gson = new Gson();
         String jsonStr = gson.toJson(accountResult);
-        if (mAccountCallCallBackLister != null) {
-            mAccountCallCallBackLister.onAccountEventCallBack(jsonStr);
+        if (mAccountCallBackListener != null) {
+            mAccountCallBackListener.onAccountEventCallBack(jsonStr);
         }
     }
 
@@ -167,13 +175,13 @@ public class SDKAPI {
     /**
      * 将project层的结果回调到这里
      */
-    private CallBackListener SDKAccountCallBackListener = new CallBackListener<AccountCallBackBean>() {
+    private CallBackListener SDKAccountCallBackListener = new CallBackListener<AccountCallbackBean>() {
         /**
          * 事件结果都回调到这里,包括失败的,取消的
          * @param callBackBean
          */
         @Override
-        public void onSuccess(AccountCallBackBean callBackBean) {
+        public void onSuccess(AccountCallbackBean callBackBean) {
             int event = callBackBean.getEvent();
             int code = callBackBean.getErrorCode();
             String msg = callBackBean.getMsg();
@@ -202,26 +210,26 @@ public class SDKAPI {
     private void logoutcallback(int code, String msg) {
 
         if (code == ErrCode.SUCCESS) {
-            accountCallBack(AccountCallBackLister.LOGOUT_SUCCESS, ErrCode.SUCCESS, msg, null);
+            accountCallBack(AccountCallBackListener.LOGOUT_SUCCESS, ErrCode.SUCCESS, msg, null);
 
         } else if (code == ErrCode.CANCEL) {
-            accountCallBack(AccountCallBackLister.LOGOUT_CANCEL, code, msg, null);
+            accountCallBack(AccountCallBackListener.LOGOUT_CANCEL, code, msg, null);
 
         } else {
-            accountCallBack(AccountCallBackLister.LOGOUT_FAILURE, code, msg, null);
+            accountCallBack(AccountCallBackListener.LOGOUT_FAILURE, code, msg, null);
         }
     }
 
     private void switchAccountCallback(int code, AccountBean loginInfo, String msg) {
 
         if (code == ErrCode.SUCCESS) {
-            accountCallBack(AccountCallBackLister.SWITCH_ACCOUNT_SUCCESS, ErrCode.SUCCESS, msg, loginInfo);
+            accountCallBack(AccountCallBackListener.SWITCH_ACCOUNT_SUCCESS, ErrCode.SUCCESS, msg, loginInfo);
 
         } else if (code == ErrCode.CANCEL) {
-            accountCallBack(AccountCallBackLister.SWITCH_ACCOUNT_CANCEL, code, msg, null);
+            accountCallBack(AccountCallBackListener.SWITCH_ACCOUNT_CANCEL, code, msg, null);
 
         } else {
-            accountCallBack(AccountCallBackLister.SWITCH_ACCOUNT_FAILURE, code, msg, null);
+            accountCallBack(AccountCallBackListener.SWITCH_ACCOUNT_FAILURE, code, msg, null);
         }
     }
 
@@ -230,7 +238,7 @@ public class SDKAPI {
             accountCallBack(AccountCallBackListener.LOGIN_SUCCESS, ErrCode.SUCCESS, msg, loginInfo);
         } else if (code == ErrCode.CANCEL) {
             accountCallBack(AccountCallBackListener.LOGIN_CANCEL, code, msg, loginInfo);
-        } else if (code == ErrCode.cannel_login_close) {
+        } else if (code == ErrCode.CHANNEL_LOGIN_CLOSE) {
             accountCallBack(AccountCallBackListener.LOGIN_FAILURE, code, msg, loginInfo);
         } else {
             accountCallBack(AccountCallBackListener.LOGIN_FAILURE, code, msg, loginInfo);
@@ -295,16 +303,16 @@ public class SDKAPI {
             public void onFailure(int errCode, String errMsg) {
 
                 if (purchaseCallBackListener != null) {
-                    if (code == ErrCode.CANCEL) {
+                    if (errCode == ErrCode.CANCEL) {
                         purchaseCallBackListener.onCancel();
 
-                    } else if (code == ErrCode.NO_PAY_RESULT) {
+                    } else if (errCode == ErrCode.NO_PAY_RESULT) {
 
                         purchaseCallBackListener.onComplete();
 
                     } else {
 
-                        purchaseCallBackListener.onFailure(code, msg);
+                        purchaseCallBackListener.onFailure(errCode, errMsg);
                     }
                 }
             }
@@ -322,7 +330,7 @@ public class SDKAPI {
             @Override
             public void onSuccess(Object o) {
                 //存在渠道退出框,并且点击退出成功
-                exitCallBackListener.onExitDailogSuccess();
+                exitCallBackListener.onExitDialogSuccess();
             }
 
             @Override

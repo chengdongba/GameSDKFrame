@@ -26,6 +26,5 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':gamesdk_utils')
-    implementation files('libs/wechat-sdk-android-without-mta-5.1.4.jar')
+    api project(':gamesdk_utils')
 }

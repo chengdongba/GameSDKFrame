@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/GameSDKBuildJarTool" />
             <option value="$PROJECT_DIR$/GameSDK_Channel/GameSDK_Channel_Test" />
             <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_account" />
             <option value="$PROJECT_DIR$/GameSDK_Manager/gamesdk_module_init" />
