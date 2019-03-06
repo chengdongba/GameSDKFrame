@@ -26,8 +26,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api project(':GameSDK_Channel_Test')
-    api project(':gamesdk_module_account')
-    api project(':gamesdk_module_init')
-    api project(':gamesdk_module_purchase')
+    compile project(':GameSDK_Channel_Test')
+    compile project(':gamesdk_module_account')
+    compile project(':gamesdk_module_init')
+    compile project(':gamesdk_module_purchase')
 }

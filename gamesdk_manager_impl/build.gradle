@@ -26,6 +26,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api project(':gamesdk_plugin_alipay')
-    api project(':gamesdk_plugin_wechat')
+    compile project(':gamesdk_plugin_alipay')
+    compile project(':gamesdk_plugin_wechat')
 }
